@@ -40,7 +40,7 @@ public class BanCommand extends BaseCommand {
             } else {
                 if (sender instanceof Player) {
                     Player banner = (Player) sender;
-                    if (plugin.getPermissionManager().isAdmin(banner) || channel.getModerators().contains(banner.getName())) {
+                    if (plugin.getPermissionManager().isModerator(banner) || plugin.getPermissionManager().isAdmin(banner) || channel.getModerators().contains(banner.getName())) {
                         Player banee = plugin.getServer().getPlayer(args[1]);
                         if (banee != null) {
                             String name = banee.getName();
