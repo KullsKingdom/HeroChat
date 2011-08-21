@@ -134,6 +134,7 @@ public class PermissionManager {
         }
     }
 
+
     public boolean isModerator(Player p) {
         if (security != null) {
             return security.has(p, "herochat.mod");
@@ -141,6 +142,7 @@ public class PermissionManager {
             return true;
         }
     }
+
 
     public boolean isAllowedColor(Player p) {
         if (security != null) {
