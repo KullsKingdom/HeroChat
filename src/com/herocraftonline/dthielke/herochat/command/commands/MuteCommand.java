@@ -33,7 +33,7 @@ public class MuteCommand extends BaseCommand {
             } else {
                 if (sender instanceof Player) {
                     Player muter = (Player) sender;
-                    if (plugin.getPermissionManager().isAdmin(muter) || channel.getModerators().contains(muter.getName())) {
+                    if (plugin.getPermissionManager().isModerator(muter) || plugin.getPermissionManager().isAdmin(muter) || channel.getModerators().contains(muter.getName())) {
                         Player mutee = plugin.getServer().getPlayer(args[1]);
                         if (mutee != null) {
                             String name = mutee.getName();
