@@ -37,7 +37,7 @@ public class KickCommand extends BaseCommand {
         if (channel != null) {
             if (sender instanceof Player) {
                 Player kicker = (Player) sender;
-                if (plugin.getPermissionManager().isAdmin(kicker) || plugin.getPermissionManager().isModerator(kicker) || channel.getModerators().contains(kicker.getName())) {
+                if (plugin.getPermissionManager().isModerator(kicker) || plugin.getPermissionManager().isAdmin(kicker) || channel.getModerators().contains(kicker.getName())) {
                     Player kickee = plugin.getServer().getPlayer(args[1]);
                     if (kickee != null) {
                         String name = kickee.getName();
